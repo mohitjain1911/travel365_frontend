@@ -84,6 +84,12 @@ variable "security_groups" {
 	type = list(string)
 }
 
+variable "target_group_arns" {
+	description = "Map of ALB target group ARNs (keys should match target_groups keys in alb module, e.g. frontend, backend, admin)"
+	type = map(string)
+	default = {}
+}
+
 variable "region" {
 	type    = string
 	default = "eu-west-2"

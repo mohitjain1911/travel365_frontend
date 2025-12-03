@@ -1,9 +1,11 @@
 terraform {
-  #  backend "s3" {
-  #    bucket = "<REPLACE_WITH_STATE_BUCKET>"
-  #    key    = "travel365/development/terraform.tfstate"
-  #   region = "eu-west-2"
-  #   dynamodb_table = "<REPLACE_WITH_DYNAMODB_TABLE>"
-  #   encrypt = true
-  #  }
+	backend "s3" {
+		# Replace these placeholders with your real backend resources
+		bucket         = "tfstate-bucket-travel365"
+		key            = "travel365/development/terraform.tfstate"
+		region         = "eu-west-2"
+		dynamodb_table = "tfstate-bucket-travel365"
+		encrypt        = true
+	}
 }
+
