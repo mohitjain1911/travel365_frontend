@@ -45,7 +45,7 @@ jobs:
       # 5. Terraform Init
       - name: Terraform Init
         working-directory: ${{ env.TF_WORKING_DIR }}
-        run: terraform init -input=false
+        run: terraform init -input=false -upgrade
 
       # 6. Terraform Validate
       - name: Terraform Validate
